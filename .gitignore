@@ -1,0 +1,10 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local rendering / tooling output
+.review_render/
+
+# System files
+.DS_Store
+Thumbs.db
