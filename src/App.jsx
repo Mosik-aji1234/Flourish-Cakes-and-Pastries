@@ -222,8 +222,8 @@ function App() {
 
         <div id="home" className="mx-auto flex min-h-[calc(100vh-104px)] max-w-7xl items-end px-5 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-24 lg:px-10 lg:pb-28">
           <div className="max-w-2xl text-white">
-            <p className="mb-5 flex items-center gap-3 text-xs font-bold tracking-[0.18em] text-[#ffd6a0] sm:text-sm">
-              <span className="h-px w-8 bg-[#ffd6a0]" />
+            <p className="relative top-3 mb-5 flex w-fit items-center gap-3 rounded-full border border-[#ffd6a0]/45 bg-[#3d1027]/30 px-3.5 py-2 text-[10px] font-bold tracking-[0.18em] text-[#ffe0ad] shadow-sm backdrop-blur-[2px] sm:top-2 sm:px-4 sm:text-xs">
+              <span className="h-px w-5 bg-[#ffd6a0] sm:w-7" />
               HAVE THE JOY OF SWEET TREATS
             </p>
             <h1 className="font-serif text-5xl font-bold leading-[0.93] tracking-tight drop-shadow-sm sm:text-6xl lg:text-7xl">
