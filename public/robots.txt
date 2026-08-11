@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://flourish-cakes-and-pastries.vercel.app/sitemap.xml
