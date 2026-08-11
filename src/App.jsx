@@ -88,6 +88,10 @@ function App() {
   const orderHref = `${whatsappHref}?text=${encodeURIComponent(orderMessage)}`
   const treatMessage = 'Hi, I am interested in ordering a special treat from Flourish Cakes & Pastries. Could you please send me the available options and pricing?'
   const treatHref = `${whatsappHref}?text=${encodeURIComponent(treatMessage)}`
+  const productOrderHref = (productName) => {
+    const message = `Hi, I am interested in ordering ${productName} from Flourish Cakes & Pastries. Could you please send me the available options and pricing?`
+    return `${whatsappHref}?text=${encodeURIComponent(message)}`
+  }
   const topMenu = [
     { image: cakeOne, name: 'Classic Celebration', description: 'Elegant buttercream cakes, lovingly finished for birthdays and every sweet milestone.' },
     { image: cakeTwo, name: 'Signature Cakes', description: 'Beautiful bespoke centrepieces created to make your celebration feel unforgettable.' },
@@ -277,7 +281,7 @@ function App() {
                 <div className="px-2 pb-2 pt-5">
                   <h3 className="font-serif text-xl font-bold text-[#5b1737]">{item.name}</h3>
                   <p className="mt-2 min-h-14 text-sm leading-6 text-[#79535a]">{item.description}</p>
-                  <a href={orderHref} className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-[#b52d62] px-4 py-3 text-sm font-bold text-white transition hover:bg-[#92214e]">
+                  <a href={productOrderHref(item.name)} className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-[#b52d62] px-4 py-3 text-sm font-bold text-white transition hover:bg-[#92214e]">
                     Order Now !!
                   </a>
                 </div>
@@ -306,7 +310,7 @@ function App() {
                 <div className="p-3 sm:p-5">
                   <h3 className="font-serif text-base font-bold text-[#5b1737] sm:text-xl">{treat.name}</h3>
                   <p className="mt-2 min-h-16 text-xs leading-5 text-[#79535a] sm:min-h-14 sm:text-sm sm:leading-6">{treat.description}</p>
-                  <a href={treatHref} className="mt-4 inline-flex w-full items-center justify-center rounded-xl border border-[#b52d62] bg-transparent px-2 py-2.5 text-xs font-bold text-[#a51e55] transition hover:bg-[#b52d62] hover:text-white sm:mt-5 sm:px-4 sm:py-3 sm:text-sm">
+                  <a href={productOrderHref(treat.name)} className="mt-4 inline-flex w-full items-center justify-center rounded-xl border border-[#b52d62] bg-transparent px-2 py-2.5 text-xs font-bold text-[#a51e55] transition hover:bg-[#b52d62] hover:text-white sm:mt-5 sm:px-4 sm:py-3 sm:text-sm">
                     Enquire Now
                   </a>
                 </div>
@@ -335,7 +339,7 @@ function App() {
               <p>We bring together beautiful design, comforting flavours, and the care of homemade baking to create cakes and treats people remember long after the last bite. Each piece is freshly prepared with attention to the details that make a celebration feel truly yours.</p>
             </div>
             <div className="mt-8 border-l-2 border-[#d97835] pl-4">
-              <p className="font-serif text-lg font-bold text-[#5b1737]">Flourish Ayodele</p>
+              <p className="font-serif text-lg font-bold text-[#5b1737]">Jesutofunmi Ayodele</p>
               <p className="mt-1 text-sm font-medium text-[#a51e55]">Founder, Flourish Cakes &amp; Pastries</p>
             </div>
           </div>
@@ -436,8 +440,8 @@ function App() {
             <h2 className="font-serif text-lg font-bold text-[#f7c58f]">Connect</h2>
             <div className="mt-4 grid gap-3 text-sm font-medium">
               <a href={whatsappHref} className="flex items-center gap-2 transition hover:text-[#f7c58f]"><WhatsAppIcon className="h-5 w-5" /> WhatsApp</a>
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 transition hover:text-[#f7c58f]"><InstagramIcon className="h-5 w-5" /> Instagram</a>
-              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 transition hover:text-[#f7c58f]"><FacebookIcon className="h-5 w-5" /> Facebook</a>
+              <a href="https://www.instagram.com/jesutofunmiflourish/" target="_blank" rel="noreferrer" className="flex items-center gap-2 transition hover:text-[#f7c58f]"><InstagramIcon className="h-5 w-5" /> Instagram</a>
+              <a href="https://www.facebook.com/jesutofunmiflourish.ayodele.5" target="_blank" rel="noreferrer" className="flex items-center gap-2 transition hover:text-[#f7c58f]"><FacebookIcon className="h-5 w-5" /> Facebook</a>
             </div>
           </div>
         </div>
